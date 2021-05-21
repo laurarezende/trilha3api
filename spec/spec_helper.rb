@@ -2,11 +2,15 @@ require "httparty"
 require "httparty/request"
 require "httparty/response/headers"
 require_relative "../services/principal_service.rb"
+require_relative "../services/token_page.rb"
 require "faker"
 require "pry"
 
 RSpec.configure do |config|
   include Principal
+  @token_class = Token.new
+  $token = @token_class.get_token("laura190298", "123456")
+  puts "Token: #{$token}"
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.

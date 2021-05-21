@@ -1,5 +1,5 @@
 describe "fazer cadastro de usuario" do
-  it "cadastrar" do
+  it "cadastrar usuario" do
     @body = {
       "usuarionome": "laura190898",
       "usuariologin": "laura190298",
